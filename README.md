@@ -6,6 +6,7 @@ You Need a OTG to Connect USB cable to mobile.
 **Step 2:**
 Download **SerialUSBTerminal** from Google Playstore.
 Connect the module to mobile by OTG.
+https://play.google.com/store/apps/details?id=de.kai_morich.serial_usb_terminal&hl=en
 
 **Step 3:**
 Open it. Go to **Option** (top-left) -> **USB Devices** -> refresh if not show. -> Click on **device**.
@@ -19,7 +20,7 @@ To save logging data click -> : on the top right -> **Data** -> Click **Log** ->
 
 
 # UBolx Neo M8N GPS Data Logger by Python
-This is a python code for extracting GNGGA and GPGGA NMEA data -- co-ordinate and alititude from log text file
+This is a python code for extracting **GNGGA** and **GPGGA** NMEA data -- co-ordinate and alititude from log text file
 
 **Step 1:**
 Convert your gps nmea log data to text file (.txt).
