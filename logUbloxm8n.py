@@ -29,24 +29,26 @@ for db_set in myfile:
         # print(db_set)
         # print(val1)
         data = db_set.split(',')
-        latDeg = float(data[2][0:2])
-        latMin = float(data[2][2:9])/60
-        lat = latDeg + latMin
+        if(data[2] != "" and data[4] != "" ):
+            latDeg = float(data[2][0:2])
+            latMin = float(data[2][2:])
+            lat = latDeg + latMin
 
-        lonDeg = float(data[4][0:3])
-        lonMin = float(data[4][3:10])/60
-        lon = lonDeg + lonMin
-        alt1 = float(data[9])
-        alt2 = float(data[11])
-        alt = alt1 + alt2 
-        # print(lat, lon)
-        # print(lat, lon, alt)
-        slno+=1
+            lonDeg = float(data[4][0:3])
+            lonMin = float(data[4][3:])
+            lon = lonDeg + lonMin
 
-        # Write to a new file
-        newFile = open(newFileName, "a")
-        newFile.writelines(str(slno)+","+str(lat) + "," + str(lon) + "," + str(alt) + "\n")
-        newFile.close()
+            alt1 = float(data[9])
+            alt2 = float(data[11])
+            alt = alt1 + alt2 
+            # print(lat, lon)
+            # print(latDeg,latMin, lonDeg, lonMin, alt1, alt2)
+            slno+=1
+
+            # Write to a new file
+            newFile = open(newFileName, "a")
+            newFile.writelines(str(slno)+","+str(lat) + "," + str(lon) + "," + str(alt) + "\n")
+            newFile.close()
 
 
 print("Success")
