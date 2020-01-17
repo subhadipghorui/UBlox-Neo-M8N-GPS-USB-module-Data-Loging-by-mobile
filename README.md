@@ -36,6 +36,6 @@ type---------- py logUbloxm8n.py
 **Step 4:**
 Enter file name: log.txt
 
-CHECK the directory and open **lat_lon_alt.csv** for co-ordinate data.
+CHECK the directory and open **lat_lon.csv** for co-ordinate data.
 
 After Runnig this file it will generate a lat_lon_alt.csv file. Which contain latitude, longitude and altitude.
