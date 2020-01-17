@@ -31,11 +31,11 @@ for db_set in myfile:
         data = db_set.split(',')
         if(data[2] != "" and data[4] != "" ):
             latDeg = float(data[2][0:2])
-            latMin = float(data[2][2:])
+            latMin = float(data[2][2:])/60
             lat = latDeg + latMin
 
             lonDeg = float(data[4][0:3])
-            lonMin = float(data[4][3:])
+            lonMin = float(data[4][3:])/60
             lon = lonDeg + lonMin
 
             alt1 = float(data[9])
