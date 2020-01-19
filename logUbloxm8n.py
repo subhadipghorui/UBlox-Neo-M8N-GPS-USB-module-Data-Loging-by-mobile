@@ -10,7 +10,7 @@ myfile = open(path, encoding="cp437")
 # Creating a new file and closed it
 newFileName = path[0:-4]+"_latlon.csv"
 newFile = open(newFileName, "w")
-newFile.writelines("slno, lat, lon, alt" + "\n")
+newFile.writelines("slno, UTC_timestamp, lat, lon, alt" + "\n")
 newFile.close()
 # Set the cursor to the 0 position
 myfile.seek(0)
@@ -44,10 +44,10 @@ for db_set in myfile:
             # print(lat, lon)
             # print(latDeg,latMin, lonDeg, lonMin, alt1, alt2)
             slno+=1
-
+            timestamp = data[1]
             # Write to a new file
             newFile = open(newFileName, "a")
-            newFile.writelines(str(slno)+","+str(lat) + "," + str(lon) + "," + str(alt) + "\n")
+            newFile.writelines(str(slno)+","+str(timestamp)+","+str(lat) + "," + str(lon) + "," + str(alt) + "\n")
             newFile.close()
 
 
